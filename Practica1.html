@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <script>
+        
+        function ordenar() {
+            
+            let num1 = Number (document.getElementById("numero1").value);
+            let num2 = Number (document.getElementById("numero2").value);
+            let num3 = Number (document.getElementById("numero3").value);
+
+        if(num1>num2 && num1>num3 && num2>num3)
+        {
+            alert ("Ordenado"+ " " + num1 +" "+ num2 + " "+ num3);
+        }
+
+        if(num2>num1 && num2>num3 && num2>num3)
+        {
+            alert ("Ordenado"+ " " + num1 +" "+ num2 + " "+ num3);
+        }
+        
+            
+        }
+
+        function mostar(){
+            
+            
+            let num1 = Number (document.getElementById("numero1").value);
+            let num2 = Number (document.getElementById("numero2").value);
+            let num3 = Number (document.getElementById("numero3").value);
+            let iguales= "Son iguales";
+
+        //muestra si son iguales   
+            if(num1==num2 && num2==num3 && num2==num3)
+        {   
+            
+            document.getElementById("salir").innerHTML = iguales;
+            
+        }
+        //Si son distintos saca el promedio
+        if(num1!=num2 && num2!=num3 && num1!=num3)
+        {
+            let promedio;
+            promedio= num1 + num2 + num3 /3;
+            document.getElementById("salir").innerHTML = promedio;
+        }
+        // si uno es disytinto muestra cual es el destint
+            if(num1!=num2 && num2==num3)
+        {
+            document.getElementById("salir").innerHTML = num1;
+        }else if(num1=num2 && num2!=num3){
+            document.getElementById("salir").innerHTML = promedio;
+        }
+    }    
+        
+        
+        
+        </script>
+</head>
+<body>
+    
+    
+    <div class="principal">
+        <label for="num1">Primer numero:</label>
+        <input type="number" id="numero1"><br>
+        <br>
+        <label for="num2">Segundo numero:</label>
+        <input type="number" id="numero2">
+        <br>
+        <br>
+        <label for="num3">Tercer numero:</label>
+        <input type="number" id="numero3">
+        <br>
+        <br>
+        <input type="submit" value="ordenar" onclick="ordenar()">
+        <hr>
+        <input type="submit" onclick="mostar()" value="mostrar">
+
+        <p id="salir">Aca se mostrarran los resultados</p>
+
+        <hr>
+        <input type="submit" onclick="crearTabla()" value="Crear tabala">
+    </div>
+        
+    
+</body>
+</html>
